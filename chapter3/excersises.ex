@@ -1,4 +1,10 @@
 defmodule Exercise do
+  @moduledoc """
+  Exercises from The Little Elixir & OTP Guidebook, Section 3.6
+
+  Write a program that spawns two processes. The first process, on receiving a `ping` messag, should reply with a `pong` message. The second process, on receiving a `pong` message, should reply with a `ping` message.
+  """
+
   def run() do
     pboss = spawn(ProcessBoss, :loop, [])
     pid1 = spawn(Process1, :loop, [])
